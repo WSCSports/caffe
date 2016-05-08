@@ -144,8 +144,10 @@ void CVMatToDatumTranspose(const cv::Mat& cv_img, Datum* datum) {
 }
 vector<float> caffeWrapper::Forward(const cv::Mat& cv_img, const unsigned &inWidth, const unsigned &inHeight, const unsigned &inChannels) {
 
-	cv::Mat bigImg;
-	cv::resize(cv_img, bigImg, cv::Size(48, 32), 0, 0, CV_INTER_LINEAR);
+	cv::Mat bigImg = cv_img.clone();
+
+	cv::resize(bigImg, bigImg, cv::Size(48, 32), 0, 0, CV_INTER_LINEAR);
+
 	//cv::Mat img = transposeImg(bigImg);
 	int num_channels = bigImg.channels();
 	int width = bigImg.cols;
