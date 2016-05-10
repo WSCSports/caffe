@@ -54,8 +54,8 @@
       <Command>"$(ScriptsDir)\ProtoCompile.cmd" "$(SolutionDir)" "$(ProtocDir)"</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>"$(ScriptsDir)\FixGFlagsNaming.cmd" "$(OutDir)" $(Configuration)
-"$(ScriptsDir)\BinplaceCudaDependencies.cmd" "$(CudaToolkitBinDir)" "$(CuDnnPath)" $(CpuOnlyBuild) $(UseCuDNN) "$(OutDir)"</Command>
+      <Command>rem "$(ScriptsDir)\FixGFlagsNaming.cmd" "$(OutDir)" $(Configuration)
+rem "$(ScriptsDir)\BinplaceCudaDependencies.cmd" "$(CudaToolkitBinDir)" "$(CuDnnPath)" $(CpuOnlyBuild) $(UseCuDNN) "$(OutDir)"</Command>
     </PostBuildEvent>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
@@ -79,8 +79,8 @@
       <Command>"$(ScriptsDir)\ProtoCompile.cmd" "$(SolutionDir)" "$(ProtocDir)"</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>"$(ScriptsDir)\FixGFlagsNaming.cmd" "$(OutDir)" $(Configuration)
-"$(ScriptsDir)\BinplaceCudaDependencies.cmd" "$(CudaToolkitBinDir)" "$(CuDnnPath)" $(CpuOnlyBuild) $(UseCuDNN) "$(OutDir)"</Command>
+      <Command>rem "$(ScriptsDir)\FixGFlagsNaming.cmd" "$(OutDir)" $(Configuration)
+rem "$(ScriptsDir)\BinplaceCudaDependencies.cmd" "$(CudaToolkitBinDir)" "$(CuDnnPath)" $(CpuOnlyBuild) $(UseCuDNN) "$(OutDir)"</Command>
     </PostBuildEvent>
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
